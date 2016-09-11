@@ -1,0 +1,37 @@
+<html><head><title>Table sample</title></head><body>
+    <form action='/foo' name='form1'>
+    <table id="table1">
+        <script type="text/javascript">
+            for (i = 1; i <= 5; i++) {
+                document.write("<tr><td>" + i
+                    + "</td><td><input name='textfield" + i
+                    + "' type='text'></td></tr>");
+            }
+        </script>
+    </table></form>
+	<button type="button" onclick='alert("foo");' id="btnAlerta" >alerta simples</button>
+	&nbsp;
+	<button type="button" onclick='alertar();' id="btnAlerta2" >alerta com acao na tela</button>
+	&nbsp;
+	<button type="button" onclick='return confirmar();' id="btnConfirma" >confirma</button>
+	
+	<div id="lugarescrita"> </div>
+	<div id="lugarescrita2"> </div>
+	
+	<script type="text/javascript">
+		var confirmar = function(){
+			var d = document.getElementById("lugarescrita");
+			if(confirm("teste")){
+				d.innerText = "confirmou";
+			}else{
+				d.innerText = "negou"
+			}
+		}
+		var alertar= function(){
+			var a = alert("foo"); 
+			console.log(a);
+			document.getElementById("lugarescrita2").innerHTML += "clicou no ok<br/>";
+			
+		}
+	</script>
+</body></html>

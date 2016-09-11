@@ -1,0 +1,25 @@
+server:
+  port: 8080
+  
+
+endpoints:
+  restart:
+    enabled: true
+  shutdown:
+    enabled: true
+  health:
+    sensitive: true
+  heathcheck:
+    enabled: true
+
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: ${vcap.services.eureka-service.credentials.uri:http://localhost:8762}/eureka/
+  instance: 
+    preferIpAddress: true
+          
+spring:
+  application:
+    name: robodistribuidoradislab
