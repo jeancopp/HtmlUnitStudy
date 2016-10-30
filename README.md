@@ -1,4 +1,4 @@
-# HtmlUnitStudy
+# htmlunit-examples
 
 A little study about HtmlUnit framework.
 
